@@ -39,6 +39,6 @@ gulp.task('js-lint', function() {
     var src = config.js.src;
     return gulp.src([src.all, src.components, '!' + src.vendor])
         .pipe(eslint())
-        .pipe(eslint.format())
-        .pipe(eslint.failAfterError());
+        .pipe(eslint.format());
+        //.pipe(eslint.failAfterError());
 });
