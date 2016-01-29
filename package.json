@@ -1,10 +1,10 @@
 {
-  "name": "frontend-bootstrap",
+  "name": "Travelapp",
   "description": "An opinionated blueprint environment to quick start new front-end codebases",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mirabeau-nl/frontend-bootstrap.git"
+    "url": "https://github.com/xbindt/Travelapp.git"
   },
   "contributors": [
     "Bran van der Meer <branmovic@gmail.com> (http://bran.name/)",
