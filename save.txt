@@ -1,0 +1,45 @@
+//https://github.com/fvdm/nodejs-ns-api
+//http://webservices.ns.nl/ns-api-stations
+//https://www.npmjs.com/package/node-simple-router
+
+var ns = require('ns-api');
+//Lets require/import the HTTP module
+var http = require('http');
+
+//Lets define a port we want to listen to
+const PORT=3000;
+
+//We need a function which handles requests and send response
+function handleRequest(request, response){
+    response.end('It Works!! Path Hit: ' + request.url);
+}
+
+//Create a server
+var server = http.createServer(handleRequest);
+var Router = require('node-simple-router');
+
+//Lets start our server
+server.listen(PORT, function(){
+    //Callback triggered when server is successfully listening. Hurray!
+    console.log("Server listening on: http://localhost:%s", PORT);
+    ns.username = 'xbindt@hotmail.com'
+    ns.password = 'gg3NJSUPGqdHZaKvmsmt5FVP8wvpF2JqEl-0rbWED8u0UE5ZcgTzdw'
+
+   // ns.storingen( {station: 'rotterdam', unplanned: true}, console.log );
+    /*ns.reisadvies(
+        {
+            fromStation: 'Amersfoort',
+            toStation:   'Den Haag',
+            dateTime:    '2016-02-21T15:50',
+            departure:   false
+        },
+        function( err, data ) {
+            console.log( err || data )
+        }
+    )*/
+    /*ns.stations(function( err, data ) {
+            console.log( err || data )
+        }
+    )*/
+
+});

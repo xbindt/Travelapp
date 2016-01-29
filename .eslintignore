@@ -1,0 +1,4 @@
+**/vendor/**
+**/polyfill/**
+**/shim/**
+**/*.min.js
